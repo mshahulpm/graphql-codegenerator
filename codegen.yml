@@ -1,0 +1,16 @@
+overwrite: true
+schema: "https://graphqlzero.almansi.me/api"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "flow"
+      - "flow-operations"
+      - "typescript-react-apollo"
+      - "typescript-document-nodes"
+      - "fragment-matcher"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
